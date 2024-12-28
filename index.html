@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TrueSelfCon</title>
+    <!-- Include Font Awesome for icons -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,6 +33,28 @@
             width: 100%;
             bottom: 0;
         }
+        
+      	.social-buttons {
+      	display: flex;
+      	justify-content: center; /* Center the buttons horizontally */
+      	gap: 20px; /* Space between the buttons */
+    	}
+
+    	.social-button {
+      	background-color: orange;
+      	color: white;
+      	padding: 15px;
+      	border-radius: 50%;
+      	text-align: center;
+      	font-size: 24px;
+      	transition: background-color 0.3s;
+      	text-decoration: none;
+    	}
+
+    	.social-button:hover {
+      	background-color: #ff6600; /* Darker orange on hover */
+    	}        
+        
         a {
             color: #ff6347;
             text-decoration: none;
@@ -94,6 +118,29 @@
 
     <footer>
         <p>&copy; 2024 TrueSelfCon. All Rights Reserved.</p>
+        <div class="social-buttons">
+      	<a href="https://www.facebook.com" class="social-button" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      	</a>
+      	<a href="https://twitter.com" class="social-button" target="_blank">
+        <i class="fab fa-twitter"></i>
+      	</a>
+      	<a href="https://www.instagram.com" class="social-button" target="_blank">
+        <i class="fab fa-instagram"></i>
+      	</a>
+      	<a href="https://www.tiktok.com" class="social-button" target="_blank">
+        <i class="fab fa-tiktok"></i>
+      	</a>
+     	<a href="https://www.youtube.com" class="social-button" target="_blank">
+        <i class="fab fa-youtube"></i>
+      	</a>
+      	<a href="https://www.twitch.tv" class="social-button" target="_blank">
+        <i class="fab fa-twitch"></i>
+      	</a>
+      	<a href="https://discord.com" class="social-button" target="_blank">
+        <i class="fab fa-discord"></i>
+      	</a>
+    	</div>
     </footer>
 	</center>
 
