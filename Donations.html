@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Donations</title>
+    <!-- Include Font Awesome for icons -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,6 +33,28 @@
             width: 100%;
             bottom: 0;
         }
+        
+        .social-buttons {
+      	display: flex;
+      	justify-content: center; /* Center the buttons horizontally */
+      	gap: 20px; /* Space between the buttons */
+    	}
+
+    	.social-button {
+      	background-color: #FAA622;
+      	color: white;
+      	padding: 15px;
+      	border-radius: 50%;
+      	text-align: center;
+      	font-size: 24px;
+      	transition: background-color 0.3s;
+      	text-decoration: none;
+    	}
+
+    	.social-button:hover {
+      	background-color: #ff6600; /* Darker orange on hover */
+    	}        
+                
         a {
             color: #ff6347;
             text-decoration: none;
@@ -65,6 +89,32 @@
 		.active {
 		  background-color: #FAA622;
 		}
+        
+        /* Style for the button container */
+        .button-container {
+            display: flex;
+            justify-content: center; /* Center the buttons horizontally */
+            gap: 20px; /* Space between buttons */
+            margin-top: 20px;
+        }
+
+        /* Style for each button */
+        .orange-button {
+            background-color: orange; /* Orange background */
+            color: white; /* White text */
+            padding: 10px 20px; /* Padding around the text */
+            font-size: 16px; /* Font size */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Show pointer cursor on hover */
+            text-align: center; /* Center text inside the button */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        /* Hover effect for buttons */
+        .orange-button:hover {
+            background-color: darkorange; /* Darker orange when hovered */
+        }        
     </style>
 </head>
 <body>
@@ -91,10 +141,39 @@
 			<p>$50 - Student ribbon 2026</p>
 			<p>$75 - Teacher ribbon 2026</p>
 			<p>$100 - School Founder Badge</p>
+            
+            <div class="button-container">
+        	<!-- Button 1 -->
+        	<a href="https://docs.google.com/forms/d/e/1FAIpQLScu3iO2QoF8KCrI093tXDtncdqgZHrlCrQS3_jQl8zf1Cb3Ig/viewform" target="_blank" class="orange-button">Donate Now</a>
+    		</div>
+        	<br>                     
     </main>
 
     <footer>
         <p>&copy; 2024 TrueSelfCon. All Rights Reserved.</p>
+        <div class="social-buttons">
+      	<a href="https://www.facebook.com/share/g/15oLWdDWoB/" class="social-button" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      	</a>
+      	<a href="https://twitter.com/trueselfcon" class="social-button" target="_blank">
+        <i class="fab fa-twitter"></i>
+      	</a>
+      	<a href="https://www.instagram.com/trueselfcon/" class="social-button" target="_blank">
+        <i class="fab fa-instagram"></i>
+      	</a>
+      	<a href="https://www.tiktok.com/@trueselfcon" class="social-button" target="_blank">
+        <i class="fab fa-tiktok"></i>
+      	</a>
+     	<a href="https://www.youtube.com/channel/UCnRwfS_LO_rYZKmppmn4t_g" class="social-button" target="_blank">
+        <i class="fab fa-youtube"></i>
+      	</a>
+      	<a href="https://www.twitch.tv/trueselfcon" class="social-button" target="_blank">
+        <i class="fab fa-twitch"></i>
+      	</a>
+      	<a href="https://discord.gg/nAbrmMSdqC" class="social-button" target="_blank">
+        <i class="fab fa-discord"></i>
+      	</a>
+    	</div>
     </footer>
 	</center>
 
