@@ -9,6 +9,7 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+            text-align: center;
             margin: 0;
             padding: 0;
         }
@@ -34,21 +35,62 @@
             color: #ff6347;
             text-decoration: none;
         }
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: #333;
+		  position: fixed;
+		  top: 5;
+		  width: 100%;
+		}
+
+		li {
+		  float: left;
+		}
+
+		li a {
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+		li a:hover:not(.active) {
+		background-color: #111;
+		}
+
+		.active {
+		  background-color: #FAA622;
+		}
     </style>
 </head>
 <body>
-
-	<center>
-    <header>
+	<header>
         <h1>TrueSelfCon</h1>
 	</header>
 
+<ul>
+  <li><a class="active" href="http://www.trueselfcon.com/index.html">Home</a></li>
+  <li><a href="http://www.trueselfcon.com/Events.html">Events</a></li>
+  <li><a href="http://www.trueselfcon.com/Donations.html">Donations</a></li>
+  <li><a href="http://www.trueselfcon.com/About.html">About</a></li>
+  <li><a href="http://www.trueselfcon.com/EscapeRoom.html">Marie's Escape Room</a></li>
+</ul>
+
     <main>
+    	<br>
 	    <h1>About Us</h1>
-		<p>We are a small group of fans planning & hosting several Persona-related events. Our goal is to one day have a full Persona Convention. We hope you will support us! </p>
-        <h2>Events</h2>
+		<p>We are a small group of fans planning & hosting several Persona-related events. Our goal is to one day have a full Persona Convention. We hope you will support us! Please come chat with us on Discord! </p>
+        <br><h1>News</h1>
         <p>We are hosting a Persona-themed escape room! Please come and have fun!</p>
         <a href="http://www.trueselfcon.com/EscapeRoom.html" target="_blank">Marie's Escape Room</a>
+        <br><br>
+        <p>Please vote for which month you would like True Self Con to be held.</p>	
+		<a href="https://docs.google.com/forms/d/e/1FAIpQLSf2yu7APhM37ejl_GaGJBoUJpwThSV1ePNEc18rkiwuY0vreg/viewform" target="_blank">Poll</a>
+
     </main>
 
     <footer>
