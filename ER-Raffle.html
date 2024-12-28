@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Escape Room Raffle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        a {
+            color: #ff6347;
+            text-decoration: none;
+        }
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: #333;
+		  position: fixed;
+		  top: 5;
+		  width: 100%;
+		}
+
+		li {
+		  float: left;
+		}
+
+		li a {
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+		li a:hover:not(.active) {
+		background-color: #111;
+		}
+
+		.active {
+		  background-color: #FAA622;
+		}
+        
+        /* Container for the images and text */
+        .image-container {
+            display: flex;
+            flex-direction: column; /* Arrange images vertically */
+            justify-content: center; /* Center images vertically */
+            align-items: center; /* Center images horizontally */
+            height: auto; /* Adjust image height */
+        }
+
+        /* Each image and its corresponding text */
+        .image-item {
+            display: flex;
+            align-items: center; /* Align image and text horizontally */
+            margin: 15px 0; /* Space between image-text pairs */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            width: auto; /* Adjust the width of the images */
+            margin-right: 15px; /* Space between image and text */
+        }
+
+        .image-text {
+            font-size: 1.2em;
+            text-align: center; /* Center text horizontally */
+            width: 100%; /* Ensures text takes the full width */
+        }
+    </style>
+    </style>
+</head>
+<body>
+	<header>
+        <h1>Escape Room Raffle</h1>
+	</header>
+
+<ul>
+  <li><a href="http://www.trueselfcon.com/index.html">Home</a></li>
+  <li><a href="http://www.trueselfcon.com/Events.html">Events</a></li>
+  <li><a href="http://www.trueselfcon.com/Donations.html">Donations</a></li>
+  <li><a href="http://www.trueselfcon.com/About.html">About</a></li>
+  <li><a class="active" href="http://www.trueselfcon.com/EscapeRoom.html">Marie's Escape Room</a></li>
+</ul>
+
+    <main>
+        <br>
+	    <h1>Raffle Prizes</h1>
+		<p>Come check this page for items that will be possible to win at the raffle!  Right now we only have three, however for every 10 RSVPs we get, more prizes will be added - so please tell your friends about the event! </p>
+        
+        <div class="image-container">
+        	<!-- Image 1 with a link and text -->
+       		<div class="image-item">
+        	<a href="http://http://www.trueselfcon.com" target="_blank">
+            	<img src="https://raw.githubusercontent.com/trueselfcon/trueselfcon/refs/heads/main/Resources/P3PP4Gcombo.jpg" alt="Grand Prize">
+        	</a>
+            <span class="image-text"><h1>Grand Prize</h1>Persona 3 Portable & Persona 4 Golden Steam Keys - If you happen to own them already, think of this as a gift to get someone else into the series!</span>
+        </div>
+            
+            <!-- Image 2 with a link and text -->
+        	<div class="image-item">
+        	<a href="http://http://www.trueselfcon.com" target="_blank">
+            	<img src="https://raw.githubusercontent.com/trueselfcon/trueselfcon/refs/heads/main/Resources/JokerGoroNotepads.png" alt="Second Prize">
+        	</a>
+            <span class="image-text"><h1>Second Prize</h1>Goro and Joker notepads made by <a href="https://www.facebook.com/YappaSaikouAC/" target="_blank">Yappa Saikou Arts and Crafts</a></span>
+        </div>
+            
+            <!-- Image 3 with a link and text -->
+       		<div class="image-item">
+        	<a href="http://http://www.trueselfcon.com" target="_blank">
+            	<img src="https://raw.githubusercontent.com/trueselfcon/trueselfcon/refs/heads/main/Resources/P5coverPS4.jpg" alt="Third Prize">
+           </a>
+           <span class="image-text"><h1>Third Prize</h1>Used Copy - Persona 5 for Playstation 4.  Perhaps another way to trick get someone into the series, or fill in your own physical collection?</span>
+        	</div>
+        </div>
+    </main>
+
+    <br>
+    <footer>
+        <p>&copy; 2024 TrueSelfCon. All Rights Reserved.</p>
+    </footer>
+	</center>
+
+</body>
+</html>
