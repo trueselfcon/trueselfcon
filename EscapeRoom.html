@@ -8,12 +8,23 @@
 	<!-- Include Font Awesome for icons -->
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+    	html, body {
+            height: 100%;
+            margin: 0;
+        }
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             text-align: center;
             margin: 0;
             padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 80px; /* Space for footer */
+        }
+        .content {
+            flex: 1;
         }
         header {
             background-color: #333;
@@ -180,12 +191,10 @@
 
         <!-- Button 5 -->
         <a href="http://www.trueselfcon.com/ER-Merch.html" target="_blank" class="orange-button">Merch</a>
-    	</div>
-        <br>        
+    	</div>        
     </main>
 
-    <br>
-	<footer>
+    <footer>
         <p>&copy; 2024 TrueSelfCon. All Rights Reserved.</p>
         <div class="social-buttons">
       	<a href="https://www.facebook.com/share/g/15oLWdDWoB/" class="social-button" target="_blank">
