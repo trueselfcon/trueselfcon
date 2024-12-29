@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TrueSelfCon</title>
+    <title>TrueSelfCon Home</title>
     <!-- Include Font Awesome for icons -->
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        body {
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;            
+        }
+		body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             text-align: center;
             margin: 0;
             padding: 0;
-			padding-bottom: 80px; /* Space for footer */
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 80px; /* Space for footer */
+            min-height: 100%;
         }
         header {
             background-color: #333;
@@ -30,17 +39,55 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
+            position: relative;
             width: 100%;
             bottom: 0;
         }
         
-      	.social-buttons {
+      	/* Styling for the sticky navigation bar */
+        nav {
+            position: sticky;
+            position: -webkit-sticky; /* Safari */
+            top: 0;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 10; /* Ensures it stays above content */            
+            width: 100%;
+            list-style-type: none;            
+		  	margin: 0;
+            padding: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Main content area styling */
+        .content {
+            flex: 1; /* Ensures the content takes up available space */
+            padding: 20px;
+            background-color: #f4f4f4;
+            overflow: auto;
+        }
+		
+		a {
+            color: #ff6347;
+            text-decoration: none;
+        }
+		
+		/* Styling for the social media buttons */
+		.social-buttons {
       	display: flex;
       	justify-content: center; /* Center the buttons horizontally */
       	gap: 20px; /* Space between the buttons */
     	}
-
     	.social-button {
       	background-color: #FAA622;
       	color: white;
@@ -51,25 +98,9 @@
       	transition: background-color 0.3s;
       	text-decoration: none;
     	}
-
     	.social-button:hover {
       	background-color: #ff6600; /* Darker orange on hover */
-    	}        
-        
-        a {
-            color: #ff6347;
-            text-decoration: none;
-        }
-		ul {
-		  list-style-type: none;
-		  margin: 0;
-		  padding: 0;
-		  overflow: hidden;
-		  background-color: #333;
-		  position: fixed;
-		  top: 5;
-		  width: 100%;
-		}
+    	}
 
 		li {
 		  float: left;
@@ -97,17 +128,17 @@
         <h1>TrueSelfCon</h1>
 	</header>
 
-<ul>
+<nav>
   <li><a class="active" href="http://www.trueselfcon.com/index.html">Home</a></li>
   <!-- Commenting Events for Time Being. Uncomment to restore -->
   <!-- <li><a href="http://www.trueselfcon.com/Events.html">Events</a></li> -->
   <li><a href="http://www.trueselfcon.com/Donations.html">Donations</a></li>
   <li><a href="http://www.trueselfcon.com/About.html">About</a></li>
   <li><a href="http://www.trueselfcon.com/EscapeRoom.html">Marie's Escape Room</a></li>
-</ul>
+</nav>
 
     <main>
-    	<br><h1>Welcome!</h1>
+    	<h1>Welcome!</h1>
         <p>TrueSelfCon site is offically here! Please be patient while we get everything configured.</p>   
         <br><h1>News</h1>
         <p>We are hosting a Persona-themed escape room! Please come and have fun!</p>

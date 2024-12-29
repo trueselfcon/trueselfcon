@@ -11,6 +11,7 @@
     	html, body {
             height: 100%;
             margin: 0;
+            padding: 0;            
         }
         body {
             font-family: Arial, sans-serif;
@@ -22,10 +23,8 @@
             display: flex;
             flex-direction: column;
             padding-bottom: 80px; /* Space for footer */
-        }
-        .content {
-            flex: 1;
-        }
+            min-height: 100%;
+        }        
         header {
             background-color: #333;
             color: white;
@@ -40,17 +39,55 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
+            position: relative;
             width: 100%;
             bottom: 0;
         }
 		
+		/* Styling for the sticky navigation bar */
+        nav {
+            position: sticky;
+            position: -webkit-sticky; /* Safari */
+            top: 0;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 10; /* Ensures it stays above content */            
+            width: 100%;
+            list-style-type: none;            
+		  	margin: 0;
+            padding: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Main content area styling */
+        .content {
+            flex: 1; /* Ensures the content takes up available space */
+            padding: 20px;
+            background-color: #f4f4f4;
+            overflow: auto;
+        }
+		
+		a {
+            color: #ff6347;
+            text-decoration: none;
+        }
+		
+		/* Styling for the social media buttons */
 		.social-buttons {
       	display: flex;
       	justify-content: center; /* Center the buttons horizontally */
       	gap: 20px; /* Space between the buttons */
     	}
-
     	.social-button {
       	background-color: #FAA622;
       	color: white;
@@ -61,25 +98,9 @@
       	transition: background-color 0.3s;
       	text-decoration: none;
     	}
-
     	.social-button:hover {
       	background-color: #ff6600; /* Darker orange on hover */
-    	}
-		
-        a {
-            color: #ff6347;
-            text-decoration: none;
-        }
-		ul {
-		  list-style-type: none;
-		  margin: 0;
-		  padding: 0;
-		  overflow: hidden;
-		  background-color: #333;
-		  position: fixed;
-		  top: 5;
-		  width: 100%;
-		}
+    	}        		            
 
 		li {
 		  float: left;
@@ -100,23 +121,8 @@
 		.active {
 		  background-color: #FAA622;
 		}
-        
-        /* Container for the images */
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end; /* Align the second image to the bottom */
-            gap: 20px; /* Adds space between the images */
-        }
-
-        /* Style for the images */
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            width: auto; /* Adjust the width of the images */
-        }
-        
-        /* Style for the button container */
+		
+		/* Style for the button container */
         .button-container {
             display: flex;
             justify-content: center; /* Center the buttons horizontally */
@@ -141,25 +147,40 @@
         .orange-button:hover {
             background-color: darkorange; /* Darker orange when hovered */
         }
+        
+        /* Container for the images */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end; /* Align the second image to the bottom */
+            gap: 20px; /* Adds space between the images */
+        }
+
+        /* Style for the images */
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            width: auto; /* Adjust the width of the images */
+        }
     </style>
 </head>
 <body>
 	<header>
-        <h1>Marie's Escape Room</h1>
+        <h1>TrueSelfCon</h1>
 	</header>
 
-<ul>
+<nav>
   <li><a href="http://www.trueselfcon.com/index.html">Home</a></li>
   <!-- Commenting Events for Time Being. Uncomment to restore -->
   <!-- <li><a href="http://www.trueselfcon.com/Events.html">Events</a></li> -->
   <li><a href="http://www.trueselfcon.com/Donations.html">Donations</a></li>
   <li><a href="http://www.trueselfcon.com/About.html">About</a></li>
   <li><a class="active" href="http://www.trueselfcon.com/EscapeRoom.html">Marie's Escape Room</a></li>
-</ul>
+</nav>
 
     <main>
-	    <br>
-        <h1>Event Type: In-Person, RSVP     Event Cost: $50/Person    Cosplay: Optional/Encouraged</h1>
+	    <h1>Marie's Escape Room</h1>
+        <h2>Event Type: In-Person, RSVP     Event Cost: $50/Person    Cosplay: Optional/Encouraged</h2>
         
         <div class="image-container">
         	<!-- Image 1 with a link -->
