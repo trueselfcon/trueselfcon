@@ -7,231 +7,316 @@
     <title>GoFundMe</title>
     <!-- Include Font Awesome for icons -->
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        html, body {
-            height: auto;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-        }
-		body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 80px; /* Space for footer */
-            min-height: 100%;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-    		position: relative; /* To prevent overlapping */
-    		z-index: 10; /* Makes sure header appears above the banner */
-        }
-        main {
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-            width: 100%;
-            bottom: 0;
-        }
-        
-        /* Banner styles */
-		.banner {
-    		width: auto;
-    		height: auto;
-    		overflow: hidden;
-    		position: relative;            
-    		top: 0; /* Ensures it stays at the top */
-		}
+    
+<!-- Banner Section -->
+    <div class="banner">
+        <img src="https://raw.githubusercontent.com/trueselfcon/trueselfcon/refs/heads/main/Resources/trueself.png" alt="TrueSelf Banner" class="banner-image">
+    </div>
+    
+	<style>
+	/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
 
-		.banner-image {
-    		width: 100%;
-    		height: auto;
-    		display: block;            
-		}
-        
-      	/* Styling for the sticky navigation bar */
-        nav {
-            position: sticky;
-            position: -webkit-sticky; /* Safari */
-            top: 0;
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            z-index: 10; /* Ensures it stays above content */            
-            width: 100%;
-            list-style-type: none;            
-		  	margin: 0;
-            padding: 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-        }
-        nav a:hover {
-            background-color: #575757;
-        }
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
 
-        /* Main content area styling */
-        .content {
-            flex: 1; /* Ensures the content takes up available space */
-            padding: 20px;
-            background-color: #f4f4f4;
-            overflow: auto;
-        }
-		
-		a {
-            color: #ff6347;
-            text-decoration: none;
-        }
-		
-		/* Styling for the social media buttons */
-		.social-buttons {
-      	display: flex;
-      	justify-content: center; /* Center the buttons horizontally */
-      	gap: 20px; /* Space between the buttons */
-    	}
-    	.social-button {
-      	background-color: #FAA622;
-      	color: white;
-      	padding: 15px;
-      	border-radius: 50%;
-      	text-align: center;
-      	font-size: 24px;
-      	transition: background-color 0.3s;
-      	text-decoration: none;
-    	}
-    	.social-button:hover {
-      	background-color: #ff6600; /* Darker orange on hover */
-    	}
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
 
-		li {
-		  float: left;
-		}
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #003366, #0066cc); /* Gradient for a fancy feel */
+    padding: 40px 0;
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-		li a {
-		  display: block;
-		  color: white;
-		  text-align: center;
-		  padding: 14px 16px;
-		  text-decoration: none;
-		}
+header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+}
 
-		li a:hover:not(.active) {
-		background-color: #111;
-		}
 
-		.active {
-		  background-color: #FAA622;
-		}
-        
-        /* Style for the button container */
-        .button-container {
-            display: flex;
-            justify-content: center; /* Center the buttons horizontally */
-            gap: 20px; /* Space between buttons */
-            margin-top: 20px;
-        }
 
-        /* Style for each button */
-        .orange-button {
-            background-color: orange; /* Orange background */
-            color: white; /* White text */
-            padding: 10px 20px; /* Padding around the text */
-            font-size: 16px; /* Font size */
-            border: none; /* Remove border */
-            border-radius: 5px; /* Rounded corners */
-            cursor: pointer; /* Show pointer cursor on hover */
-            text-align: center; /* Center text inside the button */
-            text-decoration: none; /* Remove underline from links */
-        }
+/* Banner styles */
+.banner {
+  	width: auto;
+    height: auto;
+    overflow: hidden;
+    position: relative;            
+    top: 0; /* Ensures it stays at the top */
+}
 
-        /* Hover effect for buttons */
-        .orange-button:hover {
-            background-color: darkorange; /* Darker orange when hovered */
-        }        
-    </style>
+.banner-image {
+	width: 100%;
+    height: auto;
+    display: block;            
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+	flex-wrap: wrap; /* Allow items to wrap to the next line */
+	margin-top: 15px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f2f2f2;
+}
+    
+li a:hover:not(.active) {
+	background-color: #ff6600; /* Darker orange background on hover for not active nav buttons */
+}
+
+.active {
+	background-color: #FAA622; /* Light orange background for active nav button */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.8), rgba(0, 153, 255, 0.8)); /* Light Blue gradient */
+    color: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    background-color: #FAA622; /* Light orange background for normal state */
+    color: #ffffff; 
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 8px 15px rgba(0, 102, 204, 0.4);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff6600; /* Darker orange on hover */
+    transform: translateY(-5px);
+}
+
+/* Services Section */
+.services {
+    background-color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.services h3 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.service-item {
+    background-color: #f9f9f9;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h4 {
+    font-size: 1.7rem;
+    color: #0066cc;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.service-item p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #003366, #0066cc); /* Gradient for a fancy feel */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Styling for the social media buttons */
+.social-buttons {
+     display: flex;
+     justify-content: center; /* Center the buttons horizontally */
+     gap: 20px; /* Space between the buttons */
+     margin-top: 8px;
+}
+.social-button {
+     background-color: #FAA622;
+     color: white;
+     padding: 10px;
+     border-radius: 50%;
+     text-align: center;
+     font-size: 1rem;
+     transition: background-color 0.3s;
+     text-decoration: none;
+}
+.social-button:hover {
+     background-color: #ff6600; /* Darker orange on hover */
+}
+/* End Styling for the social media buttons */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .services {
+        padding: 40px 0;
+    }
+
+    .service-item {
+        margin: 10px;
+        padding: 20px;
+    }
+}
+</style>
+	
 </head>
 <body>
-	<!-- Banner Section -->
-    <div class="banner">
-        <img src="https://raw.githubusercontent.com/trueselfcon/trueselfcon/refs/heads/main/Resources/trueself.jpg" alt="TrueSelf Banner" class="banner-image">
-    </div>
-	
-	<header>
-        <h1>TrueSelfCon</h1>
-	</header>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>TrueSelfCon</h1>                 
+            <nav>
+            	<ul>
+  					<li><a href="http://www.trueselfcon.com/index.html">Home</a></li>
+  					<li><a href="http://www.trueselfcon.com/Events.html">Events</a></li>
+					<!-- Commenting Donations out for Time Being. Uncomment to restore -->
+  					<!--<li><a href="http://www.trueselfcon.com/Donations.html">Donations</a></li> -->
+  					<li><a href="http://www.trueselfcon.com/About.html">About</a></li>
+  					<li><a href="http://www.trueselfcon.com/Venue.html">Venue</a></li>
+  					<li><a href="http://www.trueselfcon.com/Vendors.html">Vendors</a></li>
+  					<li><a href="http://www.trueselfcon.com/Registration.html">Registration</a></li>
+  					<li><a class="active" href="http://www.trueselfcon.com/GoFundMe.html">Gofundme</a></li>
+            	</ul>
+			</nav>
+        </div>
+    </header>
 
-<nav>
-  <li><a class="active" href="http://www.trueselfcon.com/index.html">Home</a></li>
-  <!-- Commenting Donations and Marie's Escape Room for Time Being. Uncomment to restore -->
-  <li><a href="http://www.trueselfcon.com/Events.html">Events</a></li>
-  <!--<li><a href="http://www.trueselfcon.com/Donations.html">Donations</a></li> -->
-  <li><a href="http://www.trueselfcon.com/About.html">About</a></li>
-  <!--<li><li><a href="http://www.trueselfcon.com/EscapeRoom.html">Marie's Escape Room</a></li> -->
-  <!--<li><a href="http://www.trueselfcon.com/MarieFunDay.html">Marie Fun Day</a></li> -->
-  <li><a href="http://www.trueselfcon.com/Venue.html">Venue</a></li>
-  <li><a href="http://www.trueselfcon.com/Vendors.html">Vendors</a></li>
-  <li><a href="http://www.trueselfcon.com/Registration.html">Registration</a></li>
-  <li><a href="http://www.trueselfcon.com/GoFundMe.html">Gofundme</a></li>
-</nav>
-
+    <!-- Main Content Section -->
     <main>
-	    <h1>Gofundme</h1>
-		<p>Our Gofundme seeks to set up a 1 day, Persona based con in Texas in 2026. The con would be a way for people to get together and share their love of the series with like-minded individuals and without the hassle of a large convention whose main focus is on making a profit. Please click the button below to donate. </p>
-            
-            <div class="button-container">
-        	<!-- Button 1 -->
-        	<a href="https://www.gofundme.com/f/support-a-persona-con-in-texas-2026" target="_blank" class="orange-button">Donate via Gofundme</a>
-    		</div>
-        	<br>                     
+        <section class="hero">
+            <div class="container">
+                <h2>Gofundme</h2>
+                <p>Our Gofundme seeks to set up a 1 day, Persona based con in Texas in 2026. The con would be a way for people to get together and share their love of the series with like-minded individuals and without the hassle of a large convention whose main focus is on making a profit. Please click the button below to donate. </p>
+                <a href="https://www.gofundme.com/f/support-a-persona-con-in-texas-2026" class="cta-button">Donate via Gofundme</a>
+            </div>
+        </section>
+        <section class="services">
+            <div class="container">
+                <h3>Donate</h3>
+                <div class="service-item">
+                    <h4>Gofundme</h4>
+                    <p>Our Gofundme seeks to set up a 1 day, Persona based con in Texas in 2026. The con would be a way for people to get together and share their love of the series with like-minded individuals and without the hassle of a large convention whose main focus is on making a profit. Please click the button below to donate. </p><br>
+                <a href="https://www.gofundme.com/f/support-a-persona-con-in-texas-2026" class="cta-button">Donate via Gofundme</a>                 
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 TrueSelfCon. All Rights Reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 TrueSelfCon. All Rights Reserved.</p>
+        </div>
+                
         <div class="social-buttons">
+        <ul>
       	<a href="https://www.facebook.com/share/g/15oLWdDWoB/" class="social-button" target="_blank" title="Follow us on Facebook">
-        <i class="fab fa-facebook-f"></i>
-      	</a>
+        <i class="fab fa-facebook-f"></i></a>
       	<a href="https://twitter.com/trueselfcon" class="social-button" target="_blank" title="Follow us on Twitter">
-        <i class="fab fa-twitter"></i>
-      	</a>
+        <i class="fab fa-twitter"></i></a>
       	<a href="https://www.instagram.com/trueselfcon/" class="social-button" target="_blank" title="Follow us on Instagram">
-        <i class="fab fa-instagram"></i>
-      	</a>
+        <i class="fab fa-instagram"></i></a>
       	<a href="https://www.tiktok.com/@trueselfcon" class="social-button" target="_blank" title="Follow us on TikTok">
-        <i class="fab fa-tiktok"></i>
-      	</a>
+        <i class="fab fa-tiktok"></i></a>
      	<a href="https://www.youtube.com/channel/UCnRwfS_LO_rYZKmppmn4t_g" class="social-button" target="_blank" title="Subscribe to us on Youtube">
-        <i class="fab fa-youtube"></i>
-      	</a>
+        <i class="fab fa-youtube"></i></a>
       	<a href="https://www.twitch.tv/trueselfcon" class="social-button" target="_blank" title="Follow us on Twitch">
-        <i class="fab fa-twitch"></i>
-      	</a>
+        <i class="fab fa-twitch"></i></a>
       	<a href="https://discord.gg/jhkepjkqAh" class="social-button" target="_blank" title="Join us on Discord">
-        <i class="fab fa-discord"></i>
-      	</a>
+        <i class="fab fa-discord"></i></a>
 		<a href="https://bsky.app/profile/trueselfcon.bsky.social" class="social-button" target="_blank" title="Follow us on BlueSky">
-        <i class="fab fa-twitter"></i>
-      	</a>
-    	</div>
+        <i class="fab fa-twitter"></i></a>
+        </ul>
+    	</div>            
+            
+        </div>
     </footer>
-	</center>
-
 </body>
 </html>

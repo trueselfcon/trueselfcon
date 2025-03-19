@@ -7,282 +7,336 @@
     <title>Registration</title>
     <!-- Include Font Awesome for icons -->
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        html, body {
-            height: auto;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-        }
-		body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 80px; /* Space for footer */
-            min-height: 100%;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-    		position: relative; /* To prevent overlapping */
-    		z-index: 10; /* Makes sure header appears above the banner */
-        }
-        main {
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-            width: 100%;
-            bottom: 0;
-        }
-        
-        /* Banner styles */
-		.banner {
-    		width: auto;
-    		height: auto;
-    		overflow: hidden;
-    		position: relative;            
-    		top: 0; /* Ensures it stays at the top */
-		}
+    
+<!-- Banner Section -->
+    <div class="banner">
+        <img src="https://raw.githubusercontent.com/trueselfcon/trueselfcon/refs/heads/main/Resources/trueself.png" alt="TrueSelf Banner" class="banner-image">
+    </div>
+    
+	<style>
+	/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
 
-		.banner-image {
-    		width: 100%;
-    		height: auto;
-    		display: block;            
-		}
-        
-      	/* Styling for the sticky navigation bar */
-        nav {
-            position: sticky;
-            position: -webkit-sticky; /* Safari */
-            top: 0;
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            z-index: 10; /* Ensures it stays above content */            
-            width: 100%;
-            list-style-type: none;            
-		  	margin: 0;
-            padding: 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-        }
-        nav a:hover {
-            background-color: #575757;
-        }
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
 
-        /* Main content area styling */
-        .content {
-            flex: 1; /* Ensures the content takes up available space */
-            padding: 20px;
-            background-color: #f4f4f4;
-            overflow: auto;
-        }
-		
-		a {
-            color: #ff6347;
-            text-decoration: none;
-        }
-		
-		/* Styling for the social media buttons */
-		.social-buttons {
-      	display: flex;
-      	justify-content: center; /* Center the buttons horizontally */
-      	gap: 20px; /* Space between the buttons */
-    	}
-    	.social-button {
-      	background-color: #FAA622;
-      	color: white;
-      	padding: 15px;
-      	border-radius: 50%;
-      	text-align: center;
-      	font-size: 24px;
-      	transition: background-color 0.3s;
-      	text-decoration: none;
-    	}
-    	.social-button:hover {
-      	background-color: #ff6600; /* Darker orange on hover */
-    	}
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
 
-		li {
-		  float: left;
-		}
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #003366, #0066cc); /* Gradient for a fancy feel */
+    padding: 40px 0;
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-		li a {
-		  display: block;
-		  color: white;
-		  text-align: center;
-		  padding: 14px 16px;
-		  text-decoration: none;
-		}
+header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+}
 
-		li a:hover:not(.active) {
-		background-color: #111;
-		}
 
-		.active {
-		  background-color: #FAA622;
-		}
-        
-        /* Style for the button container */
-        .button-container {
-            display: flex;
-            justify-content: center; /* Center the buttons horizontally */
-            gap: 20px; /* Space between buttons */
-            margin-top: 20px;
-        }
 
-        /* Style for each button */
-        .orange-button {
-            background-color: orange; /* Orange background */
-            color: white; /* White text */
-            padding: 10px 20px; /* Padding around the text */
-            font-size: 16px; /* Font size */
-            border: none; /* Remove border */
-            border-radius: 5px; /* Rounded corners */
-            cursor: pointer; /* Show pointer cursor on hover */
-            text-align: center; /* Center text inside the button */
-            text-decoration: none; /* Remove underline from links */
-        }
+/* Banner styles */
+.banner {
+  	width: auto;
+    height: auto;
+    overflow: hidden;
+    position: relative;            
+    top: 0; /* Ensures it stays at the top */
+}
 
-        /* Hover effect for buttons */
-        .orange-button:hover {
-            background-color: darkorange; /* Darker orange when hovered */
-        }
-		/* Basic styling for the FAQ */
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+.banner-image {
+	width: 100%;
+    height: auto;
+    display: block;            
+}
 
-        .faq-item {
-            margin-bottom: 15px;
-        }
 
-        .faq-question {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin: 0;
-        }
 
-        .faq-answer {
-            margin-top: 5px;
-            padding-left: 20px;
-            font-size: 1em;
-        }
-    </style>
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+	flex-wrap: wrap; /* Allow items to wrap to the next line */
+	margin-top: 15px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f2f2f2;
+}
+    
+li a:hover:not(.active) {
+	background-color: #ff6600; /* Darker orange background on hover for not active nav buttons */
+}
+
+.active {
+	background-color: #FAA622; /* Light orange background for active nav button */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.8), rgba(0, 153, 255, 0.8)); /* Light Blue gradient */
+    color: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    background-color: #FAA622; /* Light orange background for normal state */
+    color: #ffffff; 
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 8px 15px rgba(0, 102, 204, 0.4);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff6600; /* Darker orange on hover */
+    transform: translateY(-5px);
+}
+
+/* Services Section */
+.services {
+    background-color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.services h3 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.service-item {
+    background-color: #f9f9f9;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h4 {
+    font-size: 1.7rem;
+    color: #0066cc;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.service-item p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #003366, #0066cc); /* Gradient for a fancy feel */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Styling for the social media buttons */
+.social-buttons {
+     display: flex;
+     justify-content: center; /* Center the buttons horizontally */
+     gap: 20px; /* Space between the buttons */
+     margin-top: 8px;
+}
+.social-button {
+     background-color: #FAA622;
+     color: white;
+     padding: 10px;
+     border-radius: 50%;
+     text-align: center;
+     font-size: 1rem;
+     transition: background-color 0.3s;
+     text-decoration: none;
+}
+.social-button:hover {
+     background-color: #ff6600; /* Darker orange on hover */
+}
+/* End Styling for the social media buttons */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .services {
+        padding: 40px 0;
+    }
+
+    .service-item {
+        margin: 10px;
+        padding: 20px;
+    }
+}
+</style>
+	
 </head>
 <body>
-	<!-- Banner Section -->
-    <div class="banner">
-        <img src="https://raw.githubusercontent.com/trueselfcon/trueselfcon/refs/heads/main/Resources/trueself.jpg" alt="TrueSelf Banner" class="banner-image">
-    </div>
-	
-	<header>
-        <h1>TrueSelfCon</h1>
-	</header>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>TrueSelfCon</h1>                 
+            <nav>
+            	<ul>
+  					<li><a href="http://www.trueselfcon.com/index.html">Home</a></li>
+  					<li><a href="http://www.trueselfcon.com/Events.html">Events</a></li>
+					<!-- Commenting Donations out for Time Being. Uncomment to restore -->
+  					<!--<li><a href="http://www.trueselfcon.com/Donations.html">Donations</a></li> -->
+  					<li><a href="http://www.trueselfcon.com/About.html">About</a></li>
+  					<li><a href="http://www.trueselfcon.com/Venue.html">Venue</a></li>
+  					<li><a href="http://www.trueselfcon.com/Vendors.html">Vendors</a></li>
+  					<li><a class="active" href="http://www.trueselfcon.com/Registration.html">Registration</a></li>
+  					<li><a href="http://www.trueselfcon.com/GoFundMe.html">Gofundme</a></li>
+            	</ul>
+			</nav>
+        </div>
+    </header>
 
-<nav>
-  <li><a class="active" href="http://www.trueselfcon.com/index.html">Home</a></li>
-  <!-- Commenting Donations and Marie's Escape Room for Time Being. Uncomment to restore -->
-  <li><a href="http://www.trueselfcon.com/Events.html">Events</a></li>
-  <!--<li><a href="http://www.trueselfcon.com/Donations.html">Donations</a></li> -->
-  <li><a href="http://www.trueselfcon.com/About.html">About</a></li>
-  <!--<li><li><a href="http://www.trueselfcon.com/EscapeRoom.html">Marie's Escape Room</a></li> -->
-  <!--<li><a href="http://www.trueselfcon.com/MarieFunDay.html">Marie Fun Day</a></li> -->
-  <li><a href="http://www.trueselfcon.com/Venue.html">Venue</a></li>
-  <li><a href="http://www.trueselfcon.com/Vendors.html">Vendors</a></li>
-  <li><a href="http://www.trueselfcon.com/Registration.html">Registration</a></li>
-  <li><a href="http://www.trueselfcon.com/GoFundMe.html">Gofundme</a></li>
-</nav>
-
+    <!-- Main Content Section -->
     <main>
-	    <h1>Registration FAQs</h1>
-	    <p>Although this event is entirely free to all who wish to attend, we will still be registering people both online and on-site.  This page will not only lead you to the online registration link but also answer any questions you may have.  Please feel free to email trueselfcon@gmail.com if you don’t see an answer to something and we will not only reply to you but get the page updated!</p>
-		
-		<div class="faq-container">
-        <div class="faq-item">
-            <p class="faq-question">1. If there’s no cost to enter, why are you bothering with registration?</p>
-            <p class="faq-answer">There’s three big reasons we are doing registration for the convention despite it being free.
-			<br>The first is that by registering people, we can see how much interest we have and how many people decided to attend the event.  This will of course allow us to see where we are sitting numbers wise and if we need to get a larger space for the next time or stay about the same.
-			<br>The second is we still have to follow fire code, so although we’d love to see hundreds of people show up, there may be a point where we have to limit the amount of people who come in.  This is of course something we will be doing our best not to have to do, but as the convention is trying to be transparent on everything we are doing, it is included as a reason.
-			<br>As to the final reason, by providing attendees with a wristband or badge, not only will they know other attendees but this will also allow the hotel to know who is there for the event and help them better if any questions arise.</p>
-        </div>
+        <section class="hero">
+            <div class="container">
+                <h2>Registration</h2>
+                <p>Although this event is entirely free to all who wish to attend, we will still be registering people both online and on-site.  This page will not only lead you to the online registration link but also answer any questions you may have.  Please feel free to email trueselfcon@gmail.com if you don’t see an answer to something and we will not only reply to you but get the page updated!</p><br>		            
+                <a href="https://brushfire.com/trueselfcon/convention/598654" class="cta-button">Register Now</a>
+            </div>
+        </section>
 
-        <div class="faq-item">
-            <p class="faq-question">2. Online registration asks for a first and last name.  How does this work with my legal name if I don't use it?</p>
-            <p class="faq-answer">Please use your legal name so we can verify it against your ID at con.  However, we have a Preferred Name field for you to use and this is the name con staff will use for you during any interactions.  Please note that con staff will be the only ones with access to legal names unless the need arises for any emergency purposes.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="faq-question">3. What name do I give to registration when I show up, if I have a preferred name?</p>
-            <p class="faq-answer">Please give staff your preferred name when going by the registration table.  We will use this to locate you and then, as said before, use the legal name only to check against an ID for safety purposes.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="faq-question">4. What if we have kids?  What are the rules to registering this?</p>
-            <p class="faq-answer">Please register anyone above five years of age so that we have a head-count/know they are coming.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="faq-question">5. I no longer see any incentives to donate, either on the page nor with registration; are you no longer accepting donations?</p>
-            <p class="faq-answer">We are still accepting donations!  Please visit our <a href="https://www.gofundme.com/f/support-a-persona-con-in-texas-2026" target="_blank">GoFundMe</a> to donate, or do so at the convention!  We will be keeping track of those who donate through GFM and making sure all donors receive something in thanks for their donation.  We will also have a few things at the con for those who wish to donate.</p>
-        </div>
-    </div>
-            
-            <div class="button-container">
-        	<!-- Button 1 -->
-        	<a href="https://trueselfcon.brushfire.com/convention/598654" target="_blank" class="orange-button">Register Now</a>
-    		</div>                    
+        <section class="services">
+            <div class="container">
+                <h3>Registration FAQs</h3>
+                <div class="service-item">
+                    <h4>If there’s no cost to enter, why are you bothering with registration?</h4>
+                    <p>There’s three big reasons we are doing registration for the convention despite it being free.
+					<p>The first is that by registering people, we can see how much interest we have and how many people decided to attend the event.  This will of course allow us to see where we are sitting numbers wise and if we need to get a larger space for the next time or stay about the same.</p>
+					<p>The second is we still have to follow fire code, so although we’d love to see hundreds of people show up, there may be a point where we have to limit the amount of people who come in.  This is of course something we will be doing our best not to have to do, but as the convention is trying to be transparent on everything we are doing, it is included as a reason.</p>
+					<p>As to the final reason, by providing attendees with a wristband or badge, not only will they know other attendees but this will also allow the hotel to know who is there for the event and help them better if any questions arise.</p>           
+                </div>
+                <div class="service-item">
+                    <h4>Online registration asks for a first and last name.  How does this work with my legal name if I don't use it?</h4>
+                    <p>Please use your legal name so we can verify it against your ID at con.  However, we have a Preferred Name field for you to use and this is the name con staff will use for you during any interactions.  Please note that con staff will be the only ones with access to legal names unless the need arises for any emergency purposes.</p>          
+                </div>
+                
+                <div class="service-item">
+                    <h4>What name do I give to registration when I show up, if I have a preferred name?</h4>
+                    <p>Please give staff your preferred name when going by the registration table.  We will use this to locate you and then, as said before, use the legal name only to check against an ID for safety purposes.</p>          
+                </div>
+                <div class="service-item">
+                    <h4>What if we have kids?  What are the rules to registering this?</h4>
+                    <p>Please register anyone above five years of age so that we have a head-count/know they are coming.</p>         
+                </div>
+                <div class="service-item">
+                    <h4>I no longer see any incentives to donate, either on the page nor with registration; are you no longer accepting donations?</h4>
+                    <p>We are still accepting donations!  Please visit our <a href="https://www.gofundme.com/f/support-a-persona-con-in-texas-2026" target="_blank">GoFundMe</a> to donate, or do so at the convention!  We will be keeping track of those who donate through GFM and making sure all donors receive something in thanks for their donation.  We will also have a few things at the con for those who wish to donate.</p>        
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 TrueSelfCon. All Rights Reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 TrueSelfCon. All Rights Reserved.</p>
+        </div>
+                
         <div class="social-buttons">
+        <ul>
       	<a href="https://www.facebook.com/share/g/15oLWdDWoB/" class="social-button" target="_blank" title="Follow us on Facebook">
-        <i class="fab fa-facebook-f"></i>
-      	</a>
+        <i class="fab fa-facebook-f"></i></a>
       	<a href="https://twitter.com/trueselfcon" class="social-button" target="_blank" title="Follow us on Twitter">
-        <i class="fab fa-twitter"></i>
-      	</a>
+        <i class="fab fa-twitter"></i></a>
       	<a href="https://www.instagram.com/trueselfcon/" class="social-button" target="_blank" title="Follow us on Instagram">
-        <i class="fab fa-instagram"></i>
-      	</a>
+        <i class="fab fa-instagram"></i></a>
       	<a href="https://www.tiktok.com/@trueselfcon" class="social-button" target="_blank" title="Follow us on TikTok">
-        <i class="fab fa-tiktok"></i>
-      	</a>
+        <i class="fab fa-tiktok"></i></a>
      	<a href="https://www.youtube.com/channel/UCnRwfS_LO_rYZKmppmn4t_g" class="social-button" target="_blank" title="Subscribe to us on Youtube">
-        <i class="fab fa-youtube"></i>
-      	</a>
+        <i class="fab fa-youtube"></i></a>
       	<a href="https://www.twitch.tv/trueselfcon" class="social-button" target="_blank" title="Follow us on Twitch">
-        <i class="fab fa-twitch"></i>
-      	</a>
+        <i class="fab fa-twitch"></i></a>
       	<a href="https://discord.gg/jhkepjkqAh" class="social-button" target="_blank" title="Join us on Discord">
-        <i class="fab fa-discord"></i>
-      	</a>
+        <i class="fab fa-discord"></i></a>
 		<a href="https://bsky.app/profile/trueselfcon.bsky.social" class="social-button" target="_blank" title="Follow us on BlueSky">
-        <i class="fab fa-twitter"></i>
-      	</a>
-    	</div>
+        <i class="fab fa-twitter"></i></a>
+        </ul>
+    	</div>            
+            
+        </div>
     </footer>
-	</center>
-
 </body>
 </html>
