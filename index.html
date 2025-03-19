@@ -5,210 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TrueSelfCon Home</title>
+	<link rel="TSCstyle" href="styles.css">
     <!-- Include Font Awesome for icons -->
-  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        html, body {
-            height: auto;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-        }
-		body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 80px; /* Space for footer */
-            min-height: 100%;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-    		position: relative; /* To prevent overlapping */
-    		z-index: 10; /* Makes sure header appears above the banner */
-        }
-        main {
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-            width: 100%;
-            bottom: 0;
-        }
-        
-        /* Banner styles */
-		.banner {
-    		width: auto;
-    		height: auto;
-    		overflow: hidden;
-    		position: relative;            
-    		top: 0; /* Ensures it stays at the top */
-		}
-
-		.banner-image {
-    		width: 100%;
-    		height: auto;
-    		display: block;            
-		}
-        
-      	/* Styling for the sticky navigation bar */
-        nav {
-            position: sticky;
-            position: -webkit-sticky; /* Safari */
-            top: 0;
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            z-index: 10; /* Ensures it stays above content */            
-            width: 100%;
-            list-style-type: none;            
-		  	margin: 0;
-            padding: 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-        }
-        nav a:hover {
-            background-color: #575757;
-        }
-
-        /* Main content area styling */
-        .content {
-            flex: 1; /* Ensures the content takes up available space */
-            padding: 20px;
-            background-color: #f4f4f4;
-            overflow: auto;
-        }
-		
-		a {
-            color: #ff6347;
-            text-decoration: none;
-        }
-		
-		/* Styling for the social media buttons */
-		.social-buttons {
-      	display: flex;
-      	justify-content: center; /* Center the buttons horizontally */
-      	gap: 20px; /* Space between the buttons */
-    	}
-    	.social-button {
-      	background-color: #FAA622;
-      	color: white;
-      	padding: 15px;
-      	border-radius: 50%;
-      	text-align: center;
-      	font-size: 24px;
-      	transition: background-color 0.3s;
-      	text-decoration: none;
-    	}
-    	.social-button:hover {
-      	background-color: #ff6600; /* Darker orange on hover */
-    	}
-
-		li {
-		  float: left;
-		}
-
-		li a {
-		  display: block;
-		  color: white;
-		  text-align: center;
-		  padding: 14px 16px;
-		  text-decoration: none;
-		}
-
-		li a:hover:not(.active) {
-		background-color: #111;
-		}
-
-		.active {
-		  background-color: #FAA622;
-		}
-    </style>
-</head>
-<body>
-	<!-- Banner Section -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">   
+<!-- Banner Section -->
     <div class="banner">
         <img src="https://raw.githubusercontent.com/trueselfcon/trueselfcon/refs/heads/main/Resources/trueself.jpg" alt="TrueSelf Banner" class="banner-image">
-    </div>
-       
+    </div>   	
+</head>
+<body>
+    <!-- Header Section -->
     <header>
-        <h1>TrueSelfCon</h1>
-	</header>
+        <div class="container">
+            <h1>TrueSelfCon</h1>                 
+            <nav>
+            	<ul>
+  					<li><a class="active" href="http://www.trueselfcon.com/index.html">Home</a></li>
+  					<li><a href="http://www.trueselfcon.com/Events.html">Events</a></li>
+					<!-- Commenting Donations out for Time Being. Uncomment to restore -->
+  					<!--<li><a href="http://www.trueselfcon.com/Donations.html">Donations</a></li> -->
+  					<li><a href="http://www.trueselfcon.com/About.html">About</a></li>
+  					<li><a href="http://www.trueselfcon.com/Venue.html">Venue</a></li>
+  					<li><a href="http://www.trueselfcon.com/Vendors.html">Vendors</a></li>
+  					<li><a href="http://www.trueselfcon.com/Registration.html">Registration</a></li>
+  					<li><a href="http://www.trueselfcon.com/GoFundMe.html">Gofundme</a></li>
+            	</ul>
+			</nav>
+        </div>
+    </header>
 
-<nav>
-  <li><a class="active" href="http://www.trueselfcon.com/index.html">Home</a></li>
-  <!-- Commenting Donations and Marie's Escape Room for Time Being. Uncomment to restore -->
-  <li><a href="http://www.trueselfcon.com/Events.html">Events</a></li>
-  <!--<li><a href="http://www.trueselfcon.com/Donations.html">Donations</a></li> -->
-  <li><a href="http://www.trueselfcon.com/About.html">About</a></li>
-  <!--<li><li><a href="http://www.trueselfcon.com/EscapeRoom.html">Marie's Escape Room</a></li> -->
-  <!--<li><a href="http://www.trueselfcon.com/MarieFunDay.html">Marie Fun Day</a></li> -->
-  <li><a href="http://www.trueselfcon.com/Venue.html">Venue</a></li>
-  <li><a href="http://www.trueselfcon.com/Vendors.html">Vendors</a></li>
-  <li><a href="http://www.trueselfcon.com/Registration.html">Registration</a></li>
-  <li><a href="http://www.trueselfcon.com/GoFundMe.html">Gofundme</a></li>
-</nav>
-
+    <!-- Main Content Section -->
     <main>
-    	<h1>Welcome!</h1>
-        <p>Exciting news, everyone!  After working on this idea for a good many years and running some small events in-between, True Self Con is becoming a reality!</p>
-		<p>When:  April 11, 2026</p>
-		<p>Where: Hampton Inn & Suites Hurst & Holiday Inn Hurst</p>
-		<p>These hotels are located within the same parking lot as one another.  One will be used for Registration & Vendor’s Hall, while the other will be used for Events.</p>
-		<p>Over the next few weeks and months, we will be updating this site with everything you'll need to know, opening panels registration for anyone who wants to do one and getting artists and vendors registered as well, so please look forward to it and remember to join our Discord so you can ask questions, give suggestions and more.</p>
-		<p>Times: TBA</p>   
-        <br><h1>News</h1>
-        <p>We will be hosting a Marie Fun Day! Please keep an eye on the <a href="http://www.trueselfcon.com/Events.html">Events</a> page for more info!</p>
-        <!-- <a href="http://www.trueselfcon.com/MarieFunDay.html" target="_blank">Marie Fun Day</a> -->
-        <br><br>
+        <section class="hero">
+            <div class="container">
+                <h2>Welcome!</h2>
+                <p>Exciting news, everyone!  After working on this idea for a good many years and running some small events in-between, True Self Con is becoming a reality!</p>
+				<p>When:  April 11, 2026</p>
+				<p>Where: Hampton Inn & Suites Hurst & Holiday Inn Hurst</p>
+				<p>These hotels are located within the same parking lot as one another.  One will be used for Registration & Vendor’s Hall, while the other will be used for Events.</p>
+				<p>Over the next few weeks and months, we will be updating this site with everything you'll need to know, opening panels registration for anyone who wants to do one and getting artists and vendors registered as well, so please look forward to it and remember to join our Discord so you can ask questions, give suggestions and more.</p>
+				<p>Times: TBA</p>          			             
+                <a href="https://brushfire.com/trueselfcon/convention/598654" class="cta-button">Register Now</a>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <h3>News</h3>
+                <div class="service-item">
+                    <h4>Marie Fun Day</h4>
+                    <p>We will be hosting a Marie Fun Day! Please keep an eye on the <a href="http://www.trueselfcon.com/Events.html">Events</a> page for more info!</p>
+        			<!-- <a href="http://www.trueselfcon.com/MarieFunDay.html" target="_blank">Marie Fun Day</a> -->                                                     
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 TrueSelfCon. All Rights Reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 TrueSelfCon. All Rights Reserved.</p>
+        </div>
+                
         <div class="social-buttons">
+        <ul>
       	<a href="https://www.facebook.com/share/g/15oLWdDWoB/" class="social-button" target="_blank" title="Follow us on Facebook">
-        <i class="fab fa-facebook-f"></i>
-      	</a>
+        <i class="fab fa-facebook-f"></i></a>
       	<a href="https://twitter.com/trueselfcon" class="social-button" target="_blank" title="Follow us on Twitter">
-        <i class="fab fa-twitter"></i>
-      	</a>
+        <i class="fab fa-twitter"></i></a>
       	<a href="https://www.instagram.com/trueselfcon/" class="social-button" target="_blank" title="Follow us on Instagram">
-        <i class="fab fa-instagram"></i>
-      	</a>
+        <i class="fab fa-instagram"></i></a>
       	<a href="https://www.tiktok.com/@trueselfcon" class="social-button" target="_blank" title="Follow us on TikTok">
-        <i class="fab fa-tiktok"></i>
-      	</a>
+        <i class="fab fa-tiktok"></i></a>
      	<a href="https://www.youtube.com/channel/UCnRwfS_LO_rYZKmppmn4t_g" class="social-button" target="_blank" title="Subscribe to us on Youtube">
-        <i class="fab fa-youtube"></i>
-      	</a>
+        <i class="fab fa-youtube"></i></a>
       	<a href="https://www.twitch.tv/trueselfcon" class="social-button" target="_blank" title="Follow us on Twitch">
-        <i class="fab fa-twitch"></i>
-      	</a>
+        <i class="fab fa-twitch"></i></a>
       	<a href="https://discord.gg/jhkepjkqAh" class="social-button" target="_blank" title="Join us on Discord">
-        <i class="fab fa-discord"></i>
-      	</a>
+        <i class="fab fa-discord"></i></a>
 		<a href="https://bsky.app/profile/trueselfcon.bsky.social" class="social-button" target="_blank" title="Follow us on BlueSky">
-        <i class="fab fa-twitter"></i>
-      	</a>
-    	</div>
+        <i class="fab fa-twitter"></i></a>
+        </ul>
+    	</div>            
+            
+        </div>
     </footer>
-	</center>
-
 </body>
 </html>
