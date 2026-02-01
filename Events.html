@@ -248,6 +248,34 @@ footer p {
         padding: 20px;
     }
 }
+/* Container for the images and text */
+    .image-container {
+        display: flex;
+        flex-direction: column; /* Arrange images vertically */
+        justify-content: center; /* Center images vertically */
+        align-items: center; /* Center images horizontally */
+        height: auto; /* Adjust image height */
+    }
+/* Each image and its corresponding text */
+    .image-item {
+        display: flex;
+        align-items: center; /* Align image and text horizontally */
+        margin: 15px 0; /* Space between image-text pairs */
+    }
+
+    .image-container img {
+        max-width: 80%;
+        height: auto;
+        width: auto; /* Adjust the width of the images */
+        margin-right: 15px; /* Space between image and text */
+    }
+
+    .image-text {
+        font-size: 1.2em;
+        text-align: center; /* Center text horizontally */
+        width: 100%; /* Ensures text takes the full width */
+    }
+}
 </style>
 	
 </head>
@@ -276,13 +304,29 @@ footer p {
     <!-- Main Content Section -->
     <main>
         <section class="hero">
-            <div class="container">
-                <h2>Events</h2>
-                <h3>We will be hosting a Marie Fun Day!</h3>
-				<p><b>When:</b> TBA</p>
-				<p><b>Where:</b>TBA </p> 
-				<p><b>Time:</b> TBA</p>				
-            </div>
+		<div>		
+		<h1>Events</h1>
+        <p>Our first “event” announcement is more of a game than anything.  Still, as it has prizes, I think it important to share.  That being said, our first event is…<br>
+		<br>How Many Stones in the Jar?<br>
+		<br>Everyone should know this game.  We will have two jars with differing amounts of stones in them.  It will be up to you to guess the number closest to the real number in them to win prizes!<br>
+		<br>The person who is closest on the number for the jar with most stones will get to choose which of the two below figures they want.  The individual to guess the closest number to the second gets whatever figure is left over.<br>
+		<br>As to the figures, here they are!</p>
+		<br><br>
+		        
+        <div class="image-container">
+        	<!-- Text above all images -->
+        	<span class="image-text">Figure Options</span>        	
+            <!-- Container for all the images -->
+        	<div class="image-items">
+            <!-- Image 1 with a link -->
+                <a href="http://www.trueselfcon.com" target="_blank">
+            	<img src="https://raw.githubusercontent.com/trueselfcon/trueselfcon/refs/heads/main/Resources/P3P_MC-figure.png" alt="P3P MC Figure">
+        	</a>            
+            <!-- Image 2 with a link -->
+        	<a href="http://www.trueselfcon.com" target="_blank">
+            	<img src="https://raw.githubusercontent.com/trueselfcon/trueselfcon/refs/heads/main/Resources/P4_Teddie-figure.png" alt="Teddie MC Figure">
+        	</a>            
+    	</div>
         </section>
 
         <section class="services">
